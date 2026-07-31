@@ -5,19 +5,17 @@ import java.util.Locale;
 
 import javax.swing.*;
 
-import org.json.simple.JSONObject;
-
 public class Weather extends JFrame
 {
-    private JSONObject weatherData;
+    private WeatherData weatherData;
 
     public Weather()
     {
         super("Weather Gui");
 
         setSize(450, 650);
-        setLocationRelativeTo(null); // center
-        setLayout(null); // we configure the layout
+        setLocationRelativeTo(null);
+        setLayout(null);
         setResizable(false);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -56,8 +54,12 @@ public class Weather extends JFrame
                 }
 
                 weatherData = DataFetcher.getWeatherData(userInput);
+                if(weatherData == null)
+                {
+                    return;
+                }
 
-                String weatherCondition = (String) weatherData.get("weather_condition");
+                String weatherCondition = weatherData.getWeatherCondition();
 
                 String weatherResourceId = "weather_" + weatherCondition.toLowerCase(Locale.ROOT);
                 ImageIcon graphic = resourceLoader.tryResolve(weatherResourceId);
@@ -66,15 +68,12 @@ public class Weather extends JFrame
                     weatherConditionImage.setIcon(graphic);
                 }
 
-                double temperature = (double) weatherData.get("temperature");
-                temperatureLabel.setText(temperature + " C");
+                temperatureLabel.setText(weatherData.getTemperature() + " C");
                 weatherConditionLabel.setText(weatherCondition);
 
-                long humidity = (long) weatherData.get("humidity");
-                humidityText.setText("<html><b>Humidity</b> " + humidity + "%</html>");
+                humidityText.setText("<html><b>Humidity</b> " + weatherData.getHumidity() + "%</html>");
 
-                double windSpeed = (double) weatherData.get("windspeed");
-                windSpeedText.setText("<html><b>Windspeed</b> " + windSpeed + "km/h</html>");
+                windSpeedText.setText("<html><b>Windspeed</b> " + weatherData.getWindSpeed() + "km/h</html>");
             }
         });
     }

@@ -11,6 +11,5 @@
     <JLabel id = "weatherConditionImage" position = "0, 125"   size = "450, 217" rss = "weather_cloudy"/>
     <JLabel id = "windSpeedImage"        position = "220, 500" size = "74, 66"   rss = "windspeed_icon"/>
 
-
     <JButton id = "searchButton" position = "375, 13" size = "47, 45" rss = "search_icon" cursor = "hand"/>
 </layout>
