@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <Image id = "weather_clear"  path = "assets/clear.png"/>
+    <Image id = "weather_rain"   path = "assets/rain.png"/>
+    <Image id = "weather_snow"   path = "assets/snow.png"/>
+    <Image id = "weather_cloudy" path = "assets/cloudy.png"/>
+    <Image id = "humidity_icon"  path = "assets/humidity.png"/>
+    <Image id = "windspeed_icon" path = "assets/windspeed.png"/>
+    <Image id = "search_icon"    path = "assets/search.png"/>
+</resources>

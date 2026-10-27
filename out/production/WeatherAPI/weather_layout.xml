@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<layout>
+    <JTextField id = "searchTextField"   position = "{15, 15}" size = "{350, 45}" font = "Dialog" style = "plain" fontSize = "24"/>
+
+    <JLabel id = "temperatureLabel"      position = "0, 350"   size = "450, 54"  text = "X C" font = "Dialog" style = "bold" fontSize = "48" horizontalAlignment = "center"/>
+    <JLabel id = "weatherConditionLabel" position = "0, 405"   size = "450, 36"  text = "Cloudy" font = "Dialog" style = "plain" fontSize = "32" horizontalAlignment = "center"/>
+    <JLabel id = "humidityText"          position = "90, 500"  size = "85, 55"   font = "Dialog" style = "plain" fontSize = "16" text = "initial text test"/>
+    <JLabel id = "windSpeedText"         position = "310, 500" size = "85, 55"   font = "Dialog" style = "plain" fontSize = "16" text = "initial text test"/>
+    
+    <JLabel id = "humidityImage"         position = "15, 500"  size = "74, 66"   rss = "humidity_icon" font = "Dialog" style = "plain" fontSize = "16"/>
+    <JLabel id = "weatherConditionImage" position = "0, 125"   size = "450, 217" rss = "weather_cloudy"/>
+    <JLabel id = "windSpeedImage"        position = "220, 500" size = "74, 66"   rss = "windspeed_icon"/>
+
+
+    <JButton id = "searchButton" position = "375, 13" size = "47, 45" rss = "search_icon" cursor = "hand"/>
+</layout>
